@@ -38,12 +38,14 @@ struct TaskView: View {
             VStack {
                 List {
                     ForEach(viewModel.items) { task in
-                        TaskCell(item: task)
+                        TaskCell(viewModel: task)
                     }
                 }
                 
                 Button {
-                    viewModel.items = mockTasks
+                    viewModel.items = mockTasks.map {
+                        TaskCellViewModel(task: $0)
+                    }
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle.fill")

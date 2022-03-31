@@ -8,5 +8,5 @@
 import Foundation
 
 class TasksViewModel: ObservableObject {
-    @Published var items: [Task] = []
+    @Published var items: [TaskCellViewModel] = []
 }
