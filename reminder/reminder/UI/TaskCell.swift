@@ -11,7 +11,7 @@ struct TaskCell: View {
     var item: Task
     var body: some View {
         HStack {
-            Image(systemName: "circle")
+            Image(systemName: item.completed ? "checkmark.circle" : "circle")
                 .foregroundColor(.gray)
             Text(item.title)
             Spacer()

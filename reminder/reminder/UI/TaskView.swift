@@ -19,7 +19,7 @@ let mockTasks = [
   Task(title: "Learn about async/await", priority: .medium, completed: false),
   Task(title: "Practice", priority: .medium, completed: false),
   Task(title: "Practice more", priority: .high, completed: false),
-  Task(title: "Build side projects", priority: .high, completed: false)
+  Task(title: "Build side projects", priority: .high, completed: true)
 ]
 #endif
 
@@ -57,7 +57,7 @@ struct TaskView: View {
                 .padding()
                 .accentColor(.red)
             }
-            .navigationTitle(Text("Reminder")
+            .navigationTitle(Text("Tasks")
                                 .foregroundColor(.red))
         }
     }
