@@ -41,6 +41,9 @@ struct TaskView: View {
                     ForEach(viewModel.items) { task in
                         TaskCell(viewModel: task)
                     }
+                    .onDelete { indexSet in
+                        viewModel.removeTask(at: indexSet)
+                    }
                     
                     if presentAddNewItem {
                         TaskCell(viewModel: TaskCellViewModel(task: Task(title: "", priority: .high, completed: false))) { result in
