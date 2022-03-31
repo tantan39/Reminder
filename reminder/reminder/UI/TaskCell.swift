@@ -47,7 +47,7 @@ struct TaskCell: View {
             .id(viewModel.id)
             Spacer()
             Button {
-                
+                viewModel.item.completed.toggle()
             } label: {
                 Image(systemName: "info.circle")
                     .foregroundColor(.blue)
