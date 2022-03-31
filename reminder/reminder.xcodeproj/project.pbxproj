@@ -16,6 +16,7 @@
 		B462306127F63AEB00B6D26B /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306027F63AEB00B6D26B /* TasksViewModel.swift */; };
 		B462306327F667DD00B6D26B /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306227F667DD00B6D26B /* TaskCellViewModel.swift */; };
 		B462306527F6681A00B6D26B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306427F6681A00B6D26B /* Task.swift */; };
+		B462306727F6687800B6D26B /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306627F6687800B6D26B /* TaskRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B462306027F63AEB00B6D26B /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		B462306227F667DD00B6D26B /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
 		B462306427F6681A00B6D26B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B462306627F6687800B6D26B /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B462306427F6681A00B6D26B /* Task.swift */,
+				B462306627F6687800B6D26B /* TaskRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				B462305E27F6385A00B6D26B /* TaskCell.swift in Sources */,
 				B462305C27F634A000B6D26B /* TaskView.swift in Sources */,
+				B462306727F6687800B6D26B /* TaskRepository.swift in Sources */,
 				B462304E27F6335B00B6D26B /* ContentView.swift in Sources */,
 				B462306327F667DD00B6D26B /* TaskCellViewModel.swift in Sources */,
 				B462304C27F6335B00B6D26B /* reminderApp.swift in Sources */,
