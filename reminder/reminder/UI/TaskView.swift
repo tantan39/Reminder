@@ -41,8 +41,21 @@ struct TaskView: View {
                         TaskCell(item: task)
                     }
                 }
-                Text("Task list")
                 
+                Button {
+                    
+                } label: {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        
+                        Text("New task")
+                    }
+                    Spacer()
+                }
+                .padding()
+                .accentColor(.red)
             }
             .navigationTitle(Text("Reminder")
                                 .foregroundColor(.red))
