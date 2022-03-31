@@ -11,6 +11,7 @@
 		B462304E27F6335B00B6D26B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462304D27F6335B00B6D26B /* ContentView.swift */; };
 		B462305027F6335E00B6D26B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B462304F27F6335E00B6D26B /* Assets.xcassets */; };
 		B462305327F6335E00B6D26B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B462305227F6335E00B6D26B /* Preview Assets.xcassets */; };
+		B462305C27F634A000B6D26B /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462305B27F634A000B6D26B /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B462304D27F6335B00B6D26B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B462304F27F6335E00B6D26B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B462305227F6335E00B6D26B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B462305B27F634A000B6D26B /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B462304D27F6335B00B6D26B /* ContentView.swift */,
+				B462305B27F634A000B6D26B /* TaskView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B462305C27F634A000B6D26B /* TaskView.swift in Sources */,
 				B462304E27F6335B00B6D26B /* ContentView.swift in Sources */,
 				B462304C27F6335B00B6D26B /* reminderApp.swift in Sources */,
 			);
