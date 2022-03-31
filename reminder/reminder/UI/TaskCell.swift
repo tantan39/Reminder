@@ -37,6 +37,9 @@ struct TaskCell: View {
         HStack {
             Image(systemName: viewModel.iconName)
                 .foregroundColor(.gray)
+                .onTapGesture {
+                    viewModel.item.completed.toggle()
+                }
             TextField("Enter task title", text: $viewModel.item.title) {
                 if !self.viewModel.item.title.isEmpty {
                     onCommit(.success(viewModel.item))
@@ -47,7 +50,6 @@ struct TaskCell: View {
             .id(viewModel.id)
             Spacer()
             Button {
-                viewModel.item.completed.toggle()
             } label: {
                 Image(systemName: "info.circle")
                     .foregroundColor(.blue)
