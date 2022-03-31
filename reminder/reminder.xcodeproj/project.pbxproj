@@ -13,6 +13,7 @@
 		B462305327F6335E00B6D26B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B462305227F6335E00B6D26B /* Preview Assets.xcassets */; };
 		B462305C27F634A000B6D26B /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462305B27F634A000B6D26B /* TaskView.swift */; };
 		B462305E27F6385A00B6D26B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462305D27F6385A00B6D26B /* TaskCell.swift */; };
+		B462306127F63AEB00B6D26B /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306027F63AEB00B6D26B /* TasksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B462305227F6335E00B6D26B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B462305B27F634A000B6D26B /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		B462305D27F6385A00B6D26B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		B462306027F63AEB00B6D26B /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +84,20 @@
 		B462305A27F6338C00B6D26B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B462305F27F63AD600B6D26B /* ViewModels */,
 				B462304D27F6335B00B6D26B /* ContentView.swift */,
 				B462305B27F634A000B6D26B /* TaskView.swift */,
 				B462305D27F6385A00B6D26B /* TaskCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		B462305F27F63AD600B6D26B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B462306027F63AEB00B6D26B /* TasksViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				B462305C27F634A000B6D26B /* TaskView.swift in Sources */,
 				B462304E27F6335B00B6D26B /* ContentView.swift in Sources */,
 				B462304C27F6335B00B6D26B /* reminderApp.swift in Sources */,
+				B462306127F63AEB00B6D26B /* TasksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,19 +31,19 @@ struct Task: Identifiable {
 }
 
 struct TaskView: View {
-    var tasks: [Task] = mockTasks
+    @ObservedObject var viewModel = TasksViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(tasks) { task in
+                    ForEach(viewModel.items) { task in
                         TaskCell(item: task)
                     }
                 }
                 
                 Button {
-                    
+                    viewModel.items = mockTasks
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle.fill")
@@ -57,8 +57,7 @@ struct TaskView: View {
                 .padding()
                 .accentColor(.red)
             }
-            .navigationTitle(Text("Tasks")
-                                .foregroundColor(.red))
+            .navigationTitle("Tasks")
         }
     }
 }
