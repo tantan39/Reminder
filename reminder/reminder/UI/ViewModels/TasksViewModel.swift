@@ -8,7 +8,7 @@
 import Foundation
 
 class TasksViewModel: ObservableObject {
-    @Published var items: [TaskCellViewModel] = []
+    @Published var items: [TaskCellViewModel] = mockTasks.map { TaskCellViewModel(task: $0) }
     
     func addTask(_ task: Task) {
         let cellViewModel = TaskCellViewModel(task: task)
