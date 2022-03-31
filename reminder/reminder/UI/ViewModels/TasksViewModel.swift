@@ -9,4 +9,9 @@ import Foundation
 
 class TasksViewModel: ObservableObject {
     @Published var items: [TaskCellViewModel] = []
+    
+    func addTask(_ task: Task) {
+        let cellViewModel = TaskCellViewModel(task: task)
+        items.append(cellViewModel)
+    }
 }

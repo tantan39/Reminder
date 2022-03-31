@@ -9,8 +9,8 @@ import SwiftUI
 import Combine
 
 class TaskCellViewModel: ObservableObject, Identifiable {
+    var id: String = ""
     @Published var item: Task
-    @Published var title: String = ""
     @Published var iconName: String = ""
     
     private var cancellabels = Set<AnyCancellable>()
@@ -24,20 +24,27 @@ class TaskCellViewModel: ObservableObject, Identifiable {
             .store(in: &cancellabels)
         
         $item
-            .map { $0.title }
-            .assign(to: \.title, on: self)
+            .map { $0.id }
+            .assign(to: \.id, on: self)
             .store(in: &cancellabels)
     }
 }
 
 struct TaskCell: View {
-    var viewModel: TaskCellViewModel
-    
+    @ObservedObject var viewModel: TaskCellViewModel
+    var onCommit: (Result<Task, InputError>) -> Void = { _ in }
     var body: some View {
         HStack {
             Image(systemName: viewModel.iconName)
                 .foregroundColor(.gray)
-            Text(viewModel.title)
+            TextField("Enter task title", text: $viewModel.item.title) {
+                if !self.viewModel.item.title.isEmpty {
+                    onCommit(.success(viewModel.item))
+                } else {
+                    onCommit(.failure(.empty))
+                }
+            }
+            .id(viewModel.id)
             Spacer()
             Button {
                 
@@ -50,3 +57,6 @@ struct TaskCell: View {
     }
 }
 
+enum InputError: Error {
+  case empty
+}

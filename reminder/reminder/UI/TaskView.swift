@@ -32,6 +32,7 @@ struct Task: Identifiable {
 
 struct TaskView: View {
     @ObservedObject var viewModel = TasksViewModel()
+    @State var presentAddNewItem = false
     
     var body: some View {
         NavigationView {
@@ -40,12 +41,19 @@ struct TaskView: View {
                     ForEach(viewModel.items) { task in
                         TaskCell(viewModel: task)
                     }
+                    
+                    if presentAddNewItem {
+                        TaskCell(viewModel: TaskCellViewModel(task: Task(title: "", priority: .high, completed: false))) { result in
+                            if let item = try? result.get() {
+                                viewModel.addTask(item)
+                            }
+                            presentAddNewItem = false
+                        }
+                    }
                 }
                 
                 Button {
-                    viewModel.items = mockTasks.map {
-                        TaskCellViewModel(task: $0)
-                    }
+                    presentAddNewItem = true
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle.fill")
