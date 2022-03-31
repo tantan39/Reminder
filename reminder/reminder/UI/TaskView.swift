@@ -56,21 +56,4 @@ struct TaskView_Preview: PreviewProvider {
     }
 }
 
-struct TaskCell: View {
-    var item: Task
-    var body: some View {
-        HStack {
-            Image(systemName: "circle")
-                .foregroundColor(.gray)
-            Text(item.title)
-            Spacer()
-            Button {
-                
-            } label: {
-                Image(systemName: "info.circle")
-                    .foregroundColor(.blue)
-            }
 
-        }
-    }
-}
