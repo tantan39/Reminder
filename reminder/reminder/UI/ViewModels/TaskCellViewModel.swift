@@ -6,9 +6,12 @@
 //
 
 import Combine
+import Resolver
 
 class TaskCellViewModel: ObservableObject, Identifiable {
     var id: String = ""
+    @Injected var repository: TaskRepository
+    
     @Published var item: Task
     @Published var iconName: String = ""
     
@@ -25,6 +28,13 @@ class TaskCellViewModel: ObservableObject, Identifiable {
         $item
             .map { $0.id }
             .assign(to: \.id, on: self)
+            .store(in: &cancellabels)
+        
+        $item
+            .dropFirst()
+            .sink { task in
+                self.repository.updateTask(task)
+            }
             .store(in: &cancellabels)
     }
 }
