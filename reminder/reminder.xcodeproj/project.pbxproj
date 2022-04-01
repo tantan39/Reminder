@@ -31,6 +31,7 @@
 		B462308D27F7801B00B6D26B /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462308C27F7801B00B6D26B /* FirebaseStorageSwift-Beta */; };
 		B462309027F7806E00B6D26B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B462308F27F7806E00B6D26B /* FirebaseFirestore */; };
 		B462309227F7806E00B6D26B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462309127F7806E00B6D26B /* FirebaseFirestoreSwift-Beta */; };
+		B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreTaskRepository.swift; sourceTree = "<group>"; };
 		B462307F27F7728500B6D26B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		B462309327F7BDD600B6D26B /* reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reminder.entitlements; sourceTree = "<group>"; };
+		B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				B462304D27F6335B00B6D26B /* ContentView.swift */,
 				B462305B27F634A000B6D26B /* TaskView.swift */,
 				B462305D27F6385A00B6D26B /* TaskCell.swift */,
+				B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */,
 				B462305E27F6385A00B6D26B /* TaskCell.swift in Sources */,
 				B462305C27F634A000B6D26B /* TaskView.swift in Sources */,
 				B462306727F6687800B6D26B /* TaskRepository.swift in Sources */,
