@@ -37,4 +37,8 @@ class TasksViewModel: ObservableObject {
         }
         items.remove(atOffsets: indexSet)
     }
+    
+    func updateTask(_ task: Task) {
+        repository.updateTask(task)
+    }
 }

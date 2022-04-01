@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-enum TaskPriority: Codable {
+enum TaskPriority: Int, Codable {
     case low
     case medium
     case high
@@ -23,8 +25,9 @@ let mockTasks = [
 #endif
 
 struct Task: Identifiable, Codable {
-    var id: String = UUID().uuidString
+    @DocumentID var id: String?
     var title: String
     var priority: TaskPriority
     var completed: Bool
+    @ServerTimestamp var createdTime: Timestamp?
 }

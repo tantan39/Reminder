@@ -22,6 +22,9 @@
 		B462307327F69CF600B6D26B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B462307227F69CF600B6D26B /* FirebaseFirestore */; };
 		B462307527F69CF600B6D26B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462307427F69CF600B6D26B /* FirebaseFirestoreSwift-Beta */; };
 		B462307827F69DFC00B6D26B /* LocalTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462307727F69DFC00B6D26B /* LocalTaskRepository.swift */; };
+		B462307A27F73F8400B6D26B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B462307927F73F8400B6D26B /* GoogleService-Info.plist */; };
+		B462307C27F73FAF00B6D26B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462307B27F73FAF00B6D26B /* AppDelegate.swift */; };
+		B462307E27F7493D00B6D26B /* FireStoreTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		B462306427F6681A00B6D26B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B462306627F6687800B6D26B /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		B462307727F69DFC00B6D26B /* LocalTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskRepository.swift; sourceTree = "<group>"; };
+		B462307927F73F8400B6D26B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B462307B27F73FAF00B6D26B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreTaskRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 				B462305A27F6338C00B6D26B /* UI */,
 				B462305927F6338700B6D26B /* Domain */,
 				B462304B27F6335B00B6D26B /* reminderApp.swift */,
+				B462307B27F73FAF00B6D26B /* AppDelegate.swift */,
+				B462307927F73F8400B6D26B /* GoogleService-Info.plist */,
 				B462304F27F6335E00B6D26B /* Assets.xcassets */,
 				B462305127F6335E00B6D26B /* Preview Content */,
 			);
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				B462307727F69DFC00B6D26B /* LocalTaskRepository.swift */,
+				B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -198,6 +207,7 @@
 			files = (
 				B462305327F6335E00B6D26B /* Preview Assets.xcassets in Resources */,
 				B462305027F6335E00B6D26B /* Assets.xcassets in Resources */,
+				B462307A27F73F8400B6D26B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +226,8 @@
 				B462307827F69DFC00B6D26B /* LocalTaskRepository.swift in Sources */,
 				B462304C27F6335B00B6D26B /* reminderApp.swift in Sources */,
 				B462306527F6681A00B6D26B /* Task.swift in Sources */,
+				B462307E27F7493D00B6D26B /* FireStoreTaskRepository.swift in Sources */,
+				B462307C27F73FAF00B6D26B /* AppDelegate.swift in Sources */,
 				B462306127F63AEB00B6D26B /* TasksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

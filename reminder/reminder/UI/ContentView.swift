@@ -24,7 +24,7 @@ struct ContentView_Previews: PreviewProvider {
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         register {
-            LocalTaskRepository() as TaskRepository
+            FireStoreTaskRepository() as TaskRepository
         }
         .scope(.application)
     }
