@@ -50,6 +50,7 @@
 		B462307B27F73FAF00B6D26B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreTaskRepository.swift; sourceTree = "<group>"; };
 		B462307F27F7728500B6D26B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		B462309327F7BDD600B6D26B /* reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reminder.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		B462304A27F6335B00B6D26B /* reminder */ = {
 			isa = PBXGroup;
 			children = (
+				B462309327F7BDD600B6D26B /* reminder.entitlements */,
 				B462307627F69DC400B6D26B /* Service */,
 				B462305A27F6338C00B6D26B /* UI */,
 				B462305927F6338700B6D26B /* Domain */,
@@ -383,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = reminder/reminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"reminder/Preview Content\"";
@@ -413,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = reminder/reminder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"reminder/Preview Content\"";
