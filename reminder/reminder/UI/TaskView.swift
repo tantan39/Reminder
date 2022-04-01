@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TaskView: View {
-    @ObservedObject var viewModel = TasksViewModel()
+    @ObservedObject var viewModel: TasksViewModel
     @State var presentAddNewItem = false
     
     var body: some View {
@@ -55,7 +55,7 @@ struct TaskView: View {
 
 struct TaskView_Preview: PreviewProvider {
     static var previews: some View {
-        TaskView()
+        TaskView(viewModel: TasksViewModel(service: LocalTaskRepository(storeUrl: URL(string: "")!)))
     }
 }
 

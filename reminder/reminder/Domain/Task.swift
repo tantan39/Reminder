@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TaskPriority {
+enum TaskPriority: Codable {
     case low
     case medium
     case high
@@ -22,7 +22,7 @@ let mockTasks = [
 ]
 #endif
 
-struct Task: Identifiable {
+struct Task: Identifiable, Codable {
     var id: String = UUID().uuidString
     var title: String
     var priority: TaskPriority

@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let storeUrl: URL =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("Reminder.json")
+    
     var body: some View {
-        TaskView()
+        TaskView(viewModel:
+                    TasksViewModel(service:
+                                    LocalTaskRepository(storeUrl:
+                                                            storeUrl)))
     }
 }
 
