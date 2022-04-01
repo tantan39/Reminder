@@ -18,6 +18,9 @@
 		B462306527F6681A00B6D26B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306427F6681A00B6D26B /* Task.swift */; };
 		B462306727F6687800B6D26B /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306627F6687800B6D26B /* TaskRepository.swift */; };
 		B462306A27F689D500B6D26B /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = B462306927F689D500B6D26B /* Resolver */; };
+		B462307127F69CF600B6D26B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B462307027F69CF600B6D26B /* FirebaseAnalytics */; };
+		B462307327F69CF600B6D26B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B462307227F69CF600B6D26B /* FirebaseFirestore */; };
+		B462307527F69CF600B6D26B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462307427F69CF600B6D26B /* FirebaseFirestoreSwift-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B462307127F69CF600B6D26B /* FirebaseAnalytics in Frameworks */,
+				B462307527F69CF600B6D26B /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				B462306A27F689D500B6D26B /* Resolver in Frameworks */,
+				B462307327F69CF600B6D26B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,7 @@
 		B462304A27F6335B00B6D26B /* reminder */ = {
 			isa = PBXGroup;
 			children = (
+				B462307627F69DC400B6D26B /* Service */,
 				B462305A27F6338C00B6D26B /* UI */,
 				B462305927F6338700B6D26B /* Domain */,
 				B462304B27F6335B00B6D26B /* reminderApp.swift */,
@@ -111,6 +118,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		B462307627F69DC400B6D26B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +143,9 @@
 			name = reminder;
 			packageProductDependencies = (
 				B462306927F689D500B6D26B /* Resolver */,
+				B462307027F69CF600B6D26B /* FirebaseAnalytics */,
+				B462307227F69CF600B6D26B /* FirebaseFirestore */,
+				B462307427F69CF600B6D26B /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = reminder;
 			productReference = B462304827F6335B00B6D26B /* reminder.app */;
@@ -160,6 +177,7 @@
 			mainGroup = B462303F27F6335B00B6D26B;
 			packageReferences = (
 				B462306827F689D500B6D26B /* XCRemoteSwiftPackageReference "Resolver" */,
+				B462306F27F69CF600B6D26B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B462304927F6335B00B6D26B /* Products */;
 			projectDirPath = "";
@@ -409,6 +427,14 @@
 				kind = branch;
 			};
 		};
+		B462306F27F69CF600B6D26B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -416,6 +442,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B462306827F689D500B6D26B /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		B462307027F69CF600B6D26B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B462306F27F69CF600B6D26B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B462307227F69CF600B6D26B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B462306F27F69CF600B6D26B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B462307427F69CF600B6D26B /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B462306F27F69CF600B6D26B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
