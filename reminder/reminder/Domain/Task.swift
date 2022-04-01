@@ -30,4 +30,5 @@ struct Task: Identifiable, Codable {
     var priority: TaskPriority
     var completed: Bool
     @ServerTimestamp var createdTime: Timestamp?
+    var userID: String?
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class AuthenticationService: ObservableObject {
     @Published var user: User?
