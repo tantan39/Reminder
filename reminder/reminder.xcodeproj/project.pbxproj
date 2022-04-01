@@ -17,6 +17,7 @@
 		B462306327F667DD00B6D26B /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306227F667DD00B6D26B /* TaskCellViewModel.swift */; };
 		B462306527F6681A00B6D26B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306427F6681A00B6D26B /* Task.swift */; };
 		B462306727F6687800B6D26B /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B462306627F6687800B6D26B /* TaskRepository.swift */; };
+		B462306A27F689D500B6D26B /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = B462306927F689D500B6D26B /* Resolver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B462306A27F689D500B6D26B /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +127,9 @@
 			dependencies = (
 			);
 			name = reminder;
+			packageProductDependencies = (
+				B462306927F689D500B6D26B /* Resolver */,
+			);
 			productName = reminder;
 			productReference = B462304827F6335B00B6D26B /* reminder.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				Base,
 			);
 			mainGroup = B462303F27F6335B00B6D26B;
+			packageReferences = (
+				B462306827F689D500B6D26B /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = B462304927F6335B00B6D26B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B462306827F689D500B6D26B /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B462306927F689D500B6D26B /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B462306827F689D500B6D26B /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B462304027F6335B00B6D26B /* Project object */;
 }

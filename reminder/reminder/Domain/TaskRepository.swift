@@ -18,11 +18,10 @@ protocol TaskRepository: BaseTaskRepository {
 }
 
 class LocalTaskRepository: BaseTaskRepository, TaskRepository {
-    private var storeURL: URL
     
-    init(storeUrl: URL) {
-        self.storeURL = storeUrl
-        
+    private var storeURL: URL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("Reminder.json")
+    
+    override init() {
         super.init()
         self.tasks = retrieve()
     }

@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct ContentView: View {
-    let storeUrl: URL =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("Reminder.json")
-    
     var body: some View {
         TaskView(viewModel:
-                    TasksViewModel(service:
-                                    LocalTaskRepository(storeUrl:
-                                                            storeUrl)))
+                    TasksViewModel())
     }
 }
 
@@ -23,3 +20,14 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+extension Resolver: ResolverRegistering {
+    public static func registerAllServices() {
+        register {
+            LocalTaskRepository() as TaskRepository
+        }
+        .scope(.application)
+    }
+}
+
+

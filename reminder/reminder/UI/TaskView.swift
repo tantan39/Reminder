@@ -55,7 +55,7 @@ struct TaskView: View {
 
 struct TaskView_Preview: PreviewProvider {
     static var previews: some View {
-        TaskView(viewModel: TasksViewModel(service: LocalTaskRepository(storeUrl: URL(string: "")!)))
+        TaskView(viewModel: TasksViewModel())
     }
 }
 

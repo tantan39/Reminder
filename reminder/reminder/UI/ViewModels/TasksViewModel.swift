@@ -7,17 +7,14 @@
 
 import Foundation
 import Combine
+import Resolver
 
 class TasksViewModel: ObservableObject {
-    @Published var repository: TaskRepository
+    @Published var repository: TaskRepository = Resolver.resolve()
     @Published var items: [TaskCellViewModel] = []
     private var cancellable = Set<AnyCancellable>()
     
-    init(service: TaskRepository) {
-        self.repository = service
-//        self.items = self.repository.tasks.compactMap {
-//            TaskCellViewModel(task: $0)
-//        }
+    init() {
         repository.$tasks.map { task in
             task.map {
                 TaskCellViewModel(task: $0)
@@ -28,8 +25,8 @@ class TasksViewModel: ObservableObject {
     }
     
     func addTask(_ task: Task) {
-//        let cellViewModel = TaskCellViewModel(task: task)
-//        items.append(cellViewModel)
+        //        let cellViewModel = TaskCellViewModel(task: task)
+        //        items.append(cellViewModel)
         repository.addTask(task)
     }
     
