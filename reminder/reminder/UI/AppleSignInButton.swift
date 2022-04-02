@@ -14,9 +14,9 @@ struct AppleSignInButton: View {
     
     var body: some View {
         if colorScheme == .light {
-            AppleSignInButtonUIView(color: .light)
-        } else {
             AppleSignInButtonUIView(color: .dark)
+        } else {
+            AppleSignInButtonUIView(color: .light)
         }
     }
 }

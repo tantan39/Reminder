@@ -15,20 +15,43 @@ struct SignInView: View {
     
     var body: some View {
         VStack {
-            Text("Sign in")
-                .font(.headline)
-                .fontWeight(.medium)
-                .multilineTextAlignment(.center)
+            Image("tasks")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .aspectRatio(contentMode: .fit)
                 .padding(.top, 20)
+            
+            HStack {
+                Text("Welcome to")
+                    .font(.title)
+                Text("Reminder")
+                    .font(.title)
+                    .fontWeight(.semibold)
+            }
+            .padding(.top, 40)
+            
+            Text("Create an account to save your tasks and access them anywhere. It's free. \n Forever.")
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 20)
             
             Spacer()
             
             AppleSignInButton()
-                .frame(width: 280, height: 45)
+                .frame(height: 60)
                 .onTapGesture {
                     signIn()
                 }
+            
+            Divider()
+                    .padding(.top, 20.0)
+                    .padding(.bottom, 15.0)
+            
+            Text("By using Reminder you agree to our Terms of Use and Service Policy")
+                    .multilineTextAlignment(.center)
         }
+        .padding()
     }
     
     func signIn() {

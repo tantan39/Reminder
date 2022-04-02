@@ -35,6 +35,7 @@
 		B4A2828627F7C218007ABA6A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828527F7C218007ABA6A /* SignInView.swift */; };
 		B4A2828827F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */; };
 		B4A2828B27F890C4007ABA6A /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828A27F890C4007ABA6A /* EnvironmentKeys.swift */; };
+		B4E973E127F8A14300517CAB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E973E027F8A14300517CAB /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		B4A2828527F7C218007ABA6A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButtonCoordinator.swift; sourceTree = "<group>"; };
 		B4A2828A27F890C4007ABA6A /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
+		B4E973E027F8A14300517CAB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				B462305D27F6385A00B6D26B /* TaskCell.swift */,
 				B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */,
 				B4A2828527F7C218007ABA6A /* SignInView.swift */,
+				B4E973E027F8A14300517CAB /* SettingView.swift */,
 				B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */,
 			);
 			path = UI;
@@ -275,6 +278,7 @@
 				B462304E27F6335B00B6D26B /* ContentView.swift in Sources */,
 				B462306327F667DD00B6D26B /* TaskCellViewModel.swift in Sources */,
 				B462307827F69DFC00B6D26B /* LocalTaskRepository.swift in Sources */,
+				B4E973E127F8A14300517CAB /* SettingView.swift in Sources */,
 				B4A2828627F7C218007ABA6A /* SignInView.swift in Sources */,
 				B462304C27F6335B00B6D26B /* reminderApp.swift in Sources */,
 				B462306527F6681A00B6D26B /* Task.swift in Sources */,
