@@ -10,7 +10,8 @@ import SwiftUI
 
 struct SignInView: View {
     @State var signInHandler: AppleSignInButtonCoordinator?
-    
+    @Environment(\.window) var window: UIWindow?
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         VStack {
             Text("Sign in")
@@ -30,7 +31,11 @@ struct SignInView: View {
     }
     
     func signIn() {
-        
+        signInHandler = AppleSignInButtonCoordinator(window: self.window)
+        signInHandler?.link(onSignIn: { user in
+            print("User signed in \(user.uid)")
+            presentationMode.wrappedValue.dismiss()
+        })
     }
 }
 
