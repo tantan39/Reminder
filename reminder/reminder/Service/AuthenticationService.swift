@@ -25,4 +25,19 @@ class AuthenticationService: ObservableObject {
             }
         }
     }
+    
+    func updateDisplayName(displayName: String, completion: @escaping (Result<User, Error>) -> Void) {
+        if let user = Auth.auth().currentUser {
+          let changeRequest = user.createProfileChangeRequest()
+          changeRequest.displayName = displayName
+          changeRequest.commitChanges { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                print("Successfully updated display name for user [\(user.uid)] to [\(displayName)]")
+                completion(.success(user))
+            }
+          }
+        }
+      }
 }
