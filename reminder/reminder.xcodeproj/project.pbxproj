@@ -34,6 +34,7 @@
 		B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */; };
 		B4A2828627F7C218007ABA6A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828527F7C218007ABA6A /* SignInView.swift */; };
 		B4A2828827F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */; };
+		B4A2828B27F890C4007ABA6A /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828A27F890C4007ABA6A /* EnvironmentKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		B4A2828527F7C218007ABA6A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButtonCoordinator.swift; sourceTree = "<group>"; };
+		B4A2828A27F890C4007ABA6A /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B462307627F69DC400B6D26B /* Service */,
 				B462305A27F6338C00B6D26B /* UI */,
 				B462305927F6338700B6D26B /* Domain */,
+				B4A2828927F8909E007ABA6A /* Utilities */,
 				B462304B27F6335B00B6D26B /* reminderApp.swift */,
 				B462307B27F73FAF00B6D26B /* AppDelegate.swift */,
 				B462307927F73F8400B6D26B /* GoogleService-Info.plist */,
@@ -167,6 +170,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A2828927F8909E007ABA6A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B4A2828A27F890C4007ABA6A /* EnvironmentKeys.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */,
+				B4A2828B27F890C4007ABA6A /* EnvironmentKeys.swift in Sources */,
 				B462305E27F6385A00B6D26B /* TaskCell.swift in Sources */,
 				B462305C27F634A000B6D26B /* TaskView.swift in Sources */,
 				B462306727F6687800B6D26B /* TaskRepository.swift in Sources */,
