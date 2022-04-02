@@ -11,6 +11,7 @@ import SwiftUI
 struct TaskView: View {
     @ObservedObject var viewModel: TasksViewModel
     @State var presentAddNewItem = false
+    @State var presentSignInView = false
     
     var body: some View {
         NavigationView {
@@ -48,6 +49,19 @@ struct TaskView: View {
                 .padding()
                 .accentColor(.red)
             }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        presentSignInView = true
+                    } label: {
+                        Image(systemName: "gear")
+                    }
+
+                }
+            })
+            .sheet(isPresented: $presentSignInView, content: {
+                SignInView()
+            })
             .navigationTitle("Tasks")
         }
     }

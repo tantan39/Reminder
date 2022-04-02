@@ -12,6 +12,7 @@ struct SignInView: View {
     @State var signInHandler: AppleSignInButtonCoordinator?
     @Environment(\.window) var window: UIWindow?
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         VStack {
             Text("Sign in")

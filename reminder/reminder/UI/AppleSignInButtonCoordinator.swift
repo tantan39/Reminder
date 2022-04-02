@@ -122,7 +122,17 @@ extension AppleSignInButtonCoordinator: ASAuthorizationControllerDelegate {
             
             switch state {
             case .signIn:
-                break
+                Auth.auth().signIn(with: credential) { (result, error) in
+                    if let error = error {
+                        print("Error authenticating: \(error.localizedDescription)")
+                        return
+                    }
+                    if let user = result?.user {
+                        if let onSignedInHandler = self.onSignedIn {
+                            onSignedInHandler(user)
+                        }
+                    }
+                }
             case .link:
                 currentUser.link(with: credential, completion: { result, error in
                     if let error = error, (error as NSError).code == AuthErrorCode.credentialAlreadyInUse.rawValue {
@@ -149,8 +159,17 @@ extension AppleSignInButtonCoordinator: ASAuthorizationControllerDelegate {
                     }
                     
                 })
-            default:
-                break
+                
+            case .reauth:
+                Auth.auth().currentUser?.reauthenticate(with: credential, completion: { (result, error) in
+                    if let error = error {
+                        print("Error authenticating: \(error.localizedDescription)")
+                        return
+                    }
+                    if let user = result?.user {
+                        self.doSignIn(appleIDCredential: appleIDCredential, user: user)
+                    }
+                })
             }
         }
     }
