@@ -174,6 +174,10 @@ extension AppleSignInButtonCoordinator: ASAuthorizationControllerDelegate {
         }
     }
     
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("authorizationController didCompleteWithError \(error.localizedDescription)")
+    }
+    
     private func doSignIn(appleIDCredential: ASAuthorizationAppleIDCredential, user: User) {
         if let fullName = appleIDCredential.fullName {
             if let givenName = fullName.givenName, let familyName = fullName.familyName {

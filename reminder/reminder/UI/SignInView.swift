@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SignInView: View {
+    @ObservedObject var viewModel = SignInViewModel()
     @State var signInHandler: AppleSignInButtonCoordinator?
     @Environment(\.window) var window: UIWindow?
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -30,26 +31,32 @@ struct SignInView: View {
             }
             .padding(.top, 40)
             
-            Text("Create an account to save your tasks and access them anywhere. It's free. \n Forever.")
+            if let user = viewModel.user, !user.isAnonymous {
+                Text(user.displayName ?? "")
+                    .fontWeight(.semibold)
+                Text(user.email ?? "")
+            } else {
+                Text("Create an account to save your tasks and access them anywhere. It's free. \n Forever.")
                     .font(.headline)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
                     .padding(.top, 20)
-            
-            Spacer()
-            
-            AppleSignInButton()
-                .frame(height: 60)
-                .onTapGesture {
-                    signIn()
-                }
-            
-            Divider()
+                
+                Spacer()
+                
+                AppleSignInButton()
+                    .frame(height: 60)
+                    .onTapGesture {
+                        signIn()
+                    }
+                
+                Divider()
                     .padding(.top, 20.0)
                     .padding(.bottom, 15.0)
-            
-            Text("By using Reminder you agree to our Terms of Use and Service Policy")
+                
+                Text("By using Reminder you agree to our Terms of Use and Service Policy")
                     .multilineTextAlignment(.center)
+            }
         }
         .padding()
     }

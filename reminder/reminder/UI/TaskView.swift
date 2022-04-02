@@ -54,7 +54,7 @@ struct TaskView: View {
                     Button {
                         presentSignInView = true
                     } label: {
-                        Image(systemName: "gear")
+                        Image(systemName: "person.fill")
                     }
 
                 }
