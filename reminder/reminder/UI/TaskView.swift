@@ -33,6 +33,15 @@ struct TaskView: View {
                         }
                     }
                 }
+                .emptyState($viewModel.items.isEmpty) {
+                    VStack{
+                        Spacer()
+                        Text("No tasks")
+                            .font(.title3)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                }
                 
                 Button {
                     presentAddNewItem = true
@@ -56,7 +65,7 @@ struct TaskView: View {
                     } label: {
                         Image(systemName: "person.fill")
                     }
-
+                    
                 }
             })
             .sheet(isPresented: $presentSignInView, content: {
@@ -73,4 +82,23 @@ struct TaskView_Preview: PreviewProvider {
     }
 }
 
+struct EmptyStateViewModifier<EmptyContent>: ViewModifier where EmptyContent: View {
+    var isEmpty: Bool
+    let emptyContent: () -> EmptyContent
+    
+    func body(content: Content) -> some View {
+        if isEmpty {
+            emptyContent()
+        }
+        else {
+            content
+        }
+    }
+}
 
+extension View {
+    func emptyState<EmptyContent>(_ isEmpty: Bool,
+                                  emptyContent: @escaping () -> EmptyContent) -> some View where EmptyContent: View {
+        modifier(EmptyStateViewModifier(isEmpty: isEmpty, emptyContent: emptyContent))
+    }
+}
