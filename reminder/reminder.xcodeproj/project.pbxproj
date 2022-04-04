@@ -31,6 +31,7 @@
 		B462308D27F7801B00B6D26B /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462308C27F7801B00B6D26B /* FirebaseStorageSwift-Beta */; };
 		B462309027F7806E00B6D26B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B462308F27F7806E00B6D26B /* FirebaseFirestore */; };
 		B462309227F7806E00B6D26B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B462309127F7806E00B6D26B /* FirebaseFirestoreSwift-Beta */; };
+		B47B9ED427FB5A0A002DA6C3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B9ED327FB5A0A002DA6C3 /* EmptyStateView.swift */; };
 		B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */; };
 		B4A2828627F7C218007ABA6A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828527F7C218007ABA6A /* SignInView.swift */; };
 		B4A2828827F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */; };
@@ -56,6 +57,7 @@
 		B462307D27F7493D00B6D26B /* FireStoreTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreTaskRepository.swift; sourceTree = "<group>"; };
 		B462307F27F7728500B6D26B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		B462309327F7BDD600B6D26B /* reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reminder.entitlements; sourceTree = "<group>"; };
+		B47B9ED327FB5A0A002DA6C3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		B4A2828527F7C218007ABA6A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButtonCoordinator.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B4A2828327F7BFE4007ABA6A /* AppleSignInButton.swift */,
 				B4A2828527F7C218007ABA6A /* SignInView.swift */,
 				B4A2828727F7C47E007ABA6A /* AppleSignInButtonCoordinator.swift */,
+				B47B9ED327FB5A0A002DA6C3 /* EmptyStateView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47B9ED427FB5A0A002DA6C3 /* EmptyStateView.swift in Sources */,
 				B4A2828427F7BFE4007ABA6A /* AppleSignInButton.swift in Sources */,
 				B4A2828B27F890C4007ABA6A /* EnvironmentKeys.swift in Sources */,
 				B462305E27F6385A00B6D26B /* TaskCell.swift in Sources */,
